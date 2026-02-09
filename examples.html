@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Revolution | DataMites Mission</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #007bff; --dark: #1a1a1a; --gray: #666; }
+        body { background: #fff; color: var(--dark); font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; overflow-x: hidden; scroll-behavior: smooth; }
+
+        /* Progress Tracker */
+        .progress-nav { position: fixed; top: 0; width: 100%; height: 6px; background: #eee; z-index: 1000; }
+        .progress-fill { height: 100%; background: var(--blue); width: 0%; transition: 0.3s; }
+
+        .slide { 
+            min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            padding: 80px 20px; box-sizing: border-box; text-align: center; border-bottom: 1px solid #f9f9f9;
+        }
+
+        .step-count { font-weight: 800; color: var(--blue); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero-title { font-size: 36px; font-weight: 800; margin: 15px 0; line-height: 1.2; color: #000; }
+        .story-box { max-width: 650px; font-size: 18px; color: var(--gray); line-height: 1.8; margin-bottom: 30px; }
+        
+        .highlight { color: var(--dark); font-weight: 600; border-bottom: 2px solid #d0e7ff; }
+
+        /* Tool Cards */
+        .tools-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 10px; }
+        .tool-card { 
+            background: #f0f7ff; border: 1px solid #d0e7ff; padding: 8px 18px; 
+            border-radius: 50px; font-size: 13px; font-weight: 600; color: var(--blue);
+        }
+
+        /* Action Buttons */
+        .action-group { display: flex; gap: 15px; margin-top: 50px; flex-direction: column; align-items: center; }
+        .primary-btn { background: var(--dark); color: #fff; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 16px; width: 250px; text-align: center; transition: 0.3s; }
+        .secondary-btn { background: transparent; color: var(--dark); border: 2px solid var(--dark); padding: 16px 45px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 16px; width: 250px; text-align: center; transition: 0.3s; }
+        .secondary-btn:hover { background: #f5f5f5; }
+
+        .conclusion-text { font-size: 20px; font-weight: 600; color: var(--blue); margin-top: 40px; max-width: 600px; }
+
+        @media (min-width: 600px) { .action-group { flex-direction: row; } }
+    </style>
+</head>
+<body>
+
+<div class="progress-nav"><div class="progress-fill" id="pBar"></div></div>
+
+<section class="slide">
+    <span class="step-count">Module 01: Data Science Foundation</span>
+    <h1 class="hero-title">The Strategy Behind Hits.</h1>
+    <div class="story-box">
+        Ever wondered why Netflix made <span class="highlight">"Stranger Things"</span> or <span class="highlight">"Money Heist"</span>? It wasn't a guess. They used logic to find out exactly what people love to watch. This is the foundation of every big decision.
+    </div>
+</section>
+
+<section class="slide">
+    <span class="step-count">Module 02: Python Foundation</span>
+    <h1 class="hero-title">The Language of Logic.</h1>
+    <div class="story-box">
+        When you change your Netflix password, it updates instantly, right? That smooth back-end logic is written in <span class="highlight">Python</span>. It’s a simple language used to process millions of user details every second.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Python</span> <span class="tool-card">Jupyter Notebook</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="step-count">Module 03: Statistics Essentials</span>
+    <h1 class="hero-title">What makes a movie "Trending #1"?</h1>
+    <div class="story-box">
+        A movie doesn't trend just because 10 people watched it. When lakhs of people tune in, we use <span class="highlight">Average</span> and <span class="highlight">Probability</span> to calculate and create that "Trending List" you see on your screen.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Pandas</span> <span class="tool-card">NumPy</span>
+    </div>
+</section>
+
+
+
+<section class="slide">
+    <span class="step-count">Module 04 & 05: Machine Learning</span>
+    <h1 class="hero-title">The Recommendation Secret.</h1>
+    <div class="story-box">
+        If you watch a Horror movie, Netflix suggests <span class="highlight">"The Conjuring"</span> next. How? <span class="highlight">Machine Learning</span> algorithms learn your personal choices and automatically suggest what you’ll love next.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Scikit-Learn</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="step-count">Module 06: Advanced Data Science</span>
+    <h1 class="hero-title">Movies in the Cloud.</h1>
+    <div class="story-box">
+        Netflix has lakhs of movies—they won't fit on a laptop! They use <span class="highlight">Cloud Storage (AWS)</span>. Because of the Cloud, you can stream your favorite show from any corner of the world instantly.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">AWS Basics</span> <span class="tool-card">Azure Basics</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="step-count">Module 07: Database (SQL & MongoDB)</span>
+    <h1 class="hero-title">Filtering Millions of Profiles.</h1>
+    <div class="story-box">
+        Netflix has crores of users. If they want to find <span class="highlight">"Everyone who watches Kannada movies,"</span> they use <span class="highlight">SQL</span> to filter through that massive list in a split second.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">MySQL</span> <span class="tool-card">MongoDB</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="step-count">Module 08: Version Control (Git)</span>
+    <h1 class="hero-title">Perfect Updates.</h1>
+    <div class="story-box">
+        When the Netflix app gets a new update, engineers use <span class="highlight">Git</span> to track every change. This ensures the app never crashes when a new feature is added.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Git</span> <span class="tool-card">GitHub</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="step-count">Module 09: Big Data Foundation</span>
+    <h1 class="hero-title">Friday Night Traffic.</h1>
+    <div class="story-box">
+        On Friday nights, crores of people login at the same time. To handle this <span class="highlight">Heavy Traffic</span> without any lag, Netflix uses powerful Big Data tools.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Spark</span> <span class="tool-card">Hadoop</span>
+    </div>
+</section>
+
+
+
+<section class="slide">
+    <span class="step-count">Module 10: BI Analyst</span>
+    <h1 class="hero-title">The CEO's Vision.</h1>
+    <div class="story-box">
+        The Netflix CEO needs to know: <span class="highlight">"Is India making more profit than the USA?"</span> Instead of reading files, he looks at one simple graph on a <span class="highlight">Dashboard</span>. Data helps him see the future of the company.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Tableau</span> <span class="tool-card">Power-BI</span>
+    </div>
+
+    <p class="conclusion-text">
+        At DataMites, you will learn everything—from basic Data Cleaning to creating professional reports for the CEO!
+    </p>
+
+    <div class="action-group">
+        <a href="example2.html" class="primary-btn">Explore Example 2 →</a>
+        <a href="internship.html" class="secondary-btn">Part 2: Internship</a>
+    </div>
+</section>
+
+<script>
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("pBar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>

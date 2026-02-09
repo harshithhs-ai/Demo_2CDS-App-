@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commitment Check</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-btn {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: #f0f4f8;
+            color: #555;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Impactful Card with extra 'Weight' */
+        .success-card {
+            background: #ffffff;
+            border: 2px solid #007bff;
+            padding: 35px 20px;
+            border-radius: 25px;
+            margin: 30px 0;
+            box-shadow: 0 10px 30px rgba(0,123,255,0.1);
+        }
+
+        .highlight-bold {
+            color: #007bff;
+            font-weight: 800;
+            font-size: 22px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .action-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            margin-top: auto;
+        }
+
+        #abortBtn {
+            background: #fff;
+            color: #007bff;
+            border: 2px solid #007bff;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="name.html" class="back-btn">← Back</a>
+
+        <div style="text-align: right; color: #007bff; font-weight: bold; font-size: 14px;">Step 3/10</div>
+        
+        <div class="main-content">
+            <h1 id="userGreet" style="font-size: 28px; margin-bottom: 5px;">Hi!</h1>
+            
+            <div class="success-card">
+                <span class="highlight-bold">Focus is the Key to Success.</span>
+                
+                <p style="font-size: 17px; color: #333; line-height: 1.6;">
+                    Understanding the <b>Data Science Journey</b> requires 5 minutes of your time.
+                </p>
+                
+                <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+                
+                <p style="color: #555; font-size: 16px; font-weight: 600;">
+                    Are you ready to commit your full focus?
+                </p>
+            </div>
+        </div>
+
+        <div class="action-stack">
+            <a href="parts.html" class="btn" style="text-decoration: none; text-align: center;">Yes, I am Focused</a>
+            <button id="abortBtn" class="btn">Abort</button>
+        </div>
+    </div>
+
+    <script>
+        const name = localStorage.getItem('user_name') || "Future Scientist";
+        document.getElementById('userGreet').innerText = "Hi " + name + "!";
+
+        const abortBtn = document.getElementById('abortBtn');
+        function jump() {
+            const x = Math.random() * (window.innerWidth - 120);
+            const y = Math.random() * (window.innerHeight - 50);
+            abortBtn.style.position = 'fixed';
+            abortBtn.style.left = x + 'px';
+            abortBtn.style.top = y + 'px';
+        }
+        abortBtn.addEventListener('mouseover', jump);
+        abortBtn.addEventListener('touchstart', (e) => { e.preventDefault(); jump(); });
+    </script>
+</body>
+</html>

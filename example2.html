@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Mission | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #2874f0; --orange: #ff9900; --dark: #1a1a1a; --gray: #666; }
+        body { background: #fff; color: var(--dark); font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; overflow-x: hidden; scroll-behavior: smooth; }
+
+        .top-header { position: fixed; top: 15px; left: 0; width: 100%; text-align: center; z-index: 999; }
+        .header-tag { background: rgba(40, 116, 240, 0.1); color: var(--blue); padding: 8px 20px; border-radius: 30px; font-size: 14px; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(40, 116, 240, 0.2); backdrop-filter: blur(5px); }
+
+        .progress-nav { position: fixed; top: 0; width: 100%; height: 6px; background: #eee; z-index: 1000; }
+        .progress-fill { height: 100%; background: var(--blue); width: 0%; transition: 0.3s; }
+
+        .slide { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; box-sizing: border-box; text-align: center; border-bottom: 1px solid #f9f9f9; }
+        .module-label { font-weight: 800; color: var(--blue); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero-title { font-size: 36px; font-weight: 800; margin: 15px 0; line-height: 1.2; color: #000; }
+        .story-box { max-width: 650px; font-size: 18px; color: var(--gray); line-height: 1.8; margin-bottom: 30px; }
+        .highlight { color: var(--dark); font-weight: 600; border-bottom: 2px solid var(--orange); }
+
+        .tools-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 10px; }
+        .tool-card { background: #f0f7ff; border: 1px solid #d0e7ff; padding: 8px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; color: var(--blue); }
+
+        .action-group { display: flex; gap: 15px; margin-top: 50px; flex-direction: column; align-items: center; }
+        .primary-btn { background: var(--dark); color: #fff; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 16px; width: 250px; text-align: center; transition: 0.3s; }
+        .secondary-btn { background: transparent; color: var(--dark); border: 2px solid var(--dark); padding: 16px 45px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 16px; width: 250px; text-align: center; transition: 0.3s; }
+        
+        .motivation-box { background: #fdf8e4; padding: 30px; border-radius: 20px; margin-top: 40px; max-width: 600px; border: 1px dashed #e6cc00; text-align: center; }
+
+        @media (min-width: 600px) { .action-group { flex-direction: row; } }
+    </style>
+</head>
+<body>
+
+<div class="progress-nav"><div class="progress-fill" id="pBar"></div></div>
+<div class="top-header"><div class="header-tag">Example 2 - Ecommerce Mission</div></div>
+
+<section class="slide">
+    <span class="module-label">Module 01 & 02: Foundation</span>
+    <h1 class="hero-title">Planning the Big Billion Day.</h1>
+    <div class="story-box">
+        Flipkart needs a plan for their biggest sale. How many users will visit? Which city will buy the most? You use <span class="highlight">Python</span> to pull millions of customer records and clean the data to find the starting point.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Python</span> <span class="tool-card">Data Science Foundation</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 03: Statistics</span>
+    <h1 class="hero-title">Managing the Inventory.</h1>
+    <div class="story-box">
+        Should Flipkart store 1 Lakh phones or 5 Lakh? You use <span class="highlight">Statistics</span> to calculate the "Average" and "Probability" of sales. This way, the company never runs out of stock or loses money.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Statistics Essentials</span> <span class="tool-card">Pandas</span>
+    </div>
+</section>
+
+
+
+<section class="slide">
+    <span class="module-label">Module 04 & 05: Machine Learning</span>
+    <h1 class="hero-title">Personalized Shopping.</h1>
+    <div class="story-box">
+        When a user buys a laptop, your <span class="highlight">Machine Learning</span> model automatically suggests a mouse and bag. The machine learns from millions of shoppers to increase sales for the company.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">ML Associate</span> <span class="tool-card">ML Expert</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 06, 08 & 09: Scaling Up</span>
+    <h1 class="hero-title">Handling Massive Clicks.</h1>
+    <div class="story-box">
+        During the sale, lakhs of people click 'Buy' at the same time. To keep the site fast, you use <span class="highlight">Big Data</span> tools and store everything securely in the <span class="highlight">Cloud</span> while tracking changes with <span class="highlight">Git</span>.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Big Data Foundation</span> <span class="tool-card">AWS Cloud</span> <span class="tool-card">Git</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 07 & 10: Database & BI</span>
+    <h1 class="hero-title">The CEO's War Room.</h1>
+    <div class="story-box">
+        You use <span class="highlight">SQL</span> to filter the final profit and show it on a beautiful <span class="highlight">Power BI Dashboard</span>. The CEO sees the live profit and celebrates the success of the sale!
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">SQL Database</span> <span class="tool-card">Power BI / Tableau</span>
+    </div>
+
+    <div class="motivation-box">
+        <b>At DataMites, you learn all this from the absolute basics!</b> <br> 
+        We take you from simple Data Cleaning to creating professional CEO Reports, step-by-step.
+    </div>
+
+    <div class="action-group">
+        <a href="example3.html" class="secondary-btn">Explore Example 3</a>
+        <a href="internship.html" class="primary-btn">Part 2: Internship →</a>
+    </div>
+</section>
+
+<script>
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("pBar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Journey Map</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-btn {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: #f0f4f8;
+            color: #555;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 13px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Journey Part Cards */
+        .part-card {
+            background: #fff;
+            border: 2px dashed #007bff;
+            padding: 30px 20px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Initial state: Hidden/Blur */
+        .part-content {
+            opacity: 0.1;
+            filter: blur(5px);
+            transition: 0.4s;
+        }
+
+        .part-title {
+            color: #007bff;
+            font-weight: 800;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Hover Reveal Logic */
+        .part-card:hover {
+            border-style: solid;
+            background: #f8fbff;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,123,255,0.1);
+        }
+
+        .part-card:hover .part-content {
+            opacity: 1;
+            filter: blur(0);
+        }
+
+        .tap-hint {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="focus.html" class="back-btn">← Back</a>
+
+        <div style="text-align: right; color: #007bff; font-weight: bold; font-size: 14px;">Step 4/10</div>
+        
+        <div class="main-content">
+            <h1 style="font-size: 26px; margin-bottom: 10px;">The 8-Month Strategy</h1>
+            <p class="tap-hint">Hover or Tap to reveal each part</p>
+            
+            <div class="part-card" onclick="location.href='theory.html'">
+                <div class="part-title">PART 1: Learning Phase</div>
+                <div class="part-content">
+                    <p style="color: #444; font-weight: 500;">4 Months of Intensive Training with 20+ Real-time Assignments.</p>
+                    <small style="color: #007bff;">Click to explore Part 1 →</small>
+                </div>
+            </div>
+
+            <div class="part-card" onclick="location.href='internship.html'">
+                <div class="part-title">PART 2: Career Phase</div>
+                <div class="part-content">
+                    <p style="color: #444; font-weight: 500;">4 Months of Internship, Projects, and Portfolio Building.</p>
+                    <small style="color: #007bff;">Click to explore Part 2 →</small>
+                </div>
+            </div>
+        </div>
+
+        <p style="font-size: 13px; color: #888; margin-top: 20px;">
+            Choose a phase to see the detailed breakdown.
+        </p>
+    </div>
+</body>
+</html>

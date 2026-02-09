@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Your Mission | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #007bff; --dark: #1a1a1a; --border: #eeeeee; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; margin: 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        
+        .container { width: 100%; max-width: 500px; padding: 20px; text-align: center; }
+        h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; color: var(--dark); }
+        .subtitle { color: #666; margin-bottom: 40px; font-size: 16px; }
+        
+        /* Mission Cards */
+        .card {
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+            background: #ffffff;
+        }
+
+        .card:hover { 
+            border-color: var(--blue); 
+            box-shadow: 0 20px 40px rgba(0,123,255,0.08); 
+            transform: translateY(-5px); 
+        }
+
+        .icon-box { 
+            font-size: 28px; 
+            background: #f0f7ff; 
+            min-width: 60px; 
+            height: 60px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            border-radius: 18px; 
+        }
+
+        .info h3 { margin: 0; font-size: 18px; font-weight: 700; color: var(--dark); }
+        .info p { margin: 4px 0 0; font-size: 14px; color: #888; }
+
+        /* Label for Examples */
+        .ex-label {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Theory to Reality</h1>
+    <p class="subtitle">Select a mission to see how we apply Module 1 to 10 in the real world.</p>
+
+    <div class="card" onclick="goTo('netflix')">
+        <div class="icon-box">🎬</div>
+        <div class="info">
+            <span class="ex-label">Example 01</span>
+            <h3>Entertainment</h3>
+            <p>The Netflix Revolution Story</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="goTo('ecommerce')">
+        <div class="icon-box">🛒</div>
+        <div class="info">
+            <span class="ex-label">Example 02</span>
+            <h3>Retail & E-comm</h3>
+            <p>The Flipkart Sales Strategy</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="goTo('healthcare')">
+        <div class="icon-box">🏥</div>
+        <div class="info">
+            <span class="ex-label">Example 03</span>
+            <h3>Healthcare</h3>
+            <p>Predictive Medicine & AI</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    /**
+     * Ee function cards click madidhaga kelsa madutthe.
+     * File names correct irali:
+     * 1. Netflix -> examples.html
+     * 2. Ecommerce -> example2.html
+     * 3. Healthcare -> example3.html
+     */
+    function goTo(mission) {
+        if(mission === 'netflix') {
+            window.location.href = 'examples.html';
+        } 
+        else if(mission === 'ecommerce') {
+            window.location.href = 'example2.html';
+        } 
+        else if(mission === 'healthcare') {
+            window.location.href = 'example3.html';
+        }
+    }
+</script>
+
+</body>
+</html>

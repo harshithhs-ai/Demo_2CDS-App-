@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phase 1: Learning Path</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Screen usage fix */
+        body { overflow: hidden; }
+        .container {
+            height: 100vh; /* Full screen height */
+            padding: 40px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Spreads elements across the screen */
+        }
+
+        .back-btn { position: absolute; top: 25px; left: 25px; background: #f0f4f8; padding: 10px 18px; border-radius: 12px; text-decoration: none; font-size: 14px; font-weight: bold; color: #555; }
+
+        /* Impactful Progress Card */
+        .progress-section {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers the card in the empty space */
+            width: 100%;
+        }
+
+        .success-card {
+            background: #fff;
+            padding: 30px 20px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border: 1px solid #eef2f6;
+        }
+
+        .milestone { margin-bottom: 30px; }
+        .progress-track { height: 14px; background: #eef2f6; border-radius: 20px; overflow: hidden; margin: 10px 0; }
+        .fill-bar { height: 100%; width: 0; background: linear-gradient(90deg, #007bff, #00d4ff); transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); }
+        
+        .badge { font-size: 12px; background: #e7f3ff; color: #007bff; padding: 5px 12px; border-radius: 15px; visibility: hidden; font-weight: 800; }
+
+        /* Rocket Zoom CSS */
+        .rocket-box { display: inline-block; transition: all 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+        .launching { transform: scale(40) translateY(-150px); opacity: 0; }
+
+        .btn-stack { display: none; flex-direction: column; gap: 15px; width: 100%; padding-bottom: 10px; }
+        
+        .btn-rocket {
+            background: #fff; color: #007bff; border: 2px solid #007bff;
+            padding: 18px; border-radius: 15px; text-decoration: none;
+            font-weight: 800; text-align: center; font-size: 16px; cursor: pointer;
+        }
+    </style>
+</head>
+<body onload="runFlow()">
+    <div class="container">
+        <a href="parts.html" class="back-btn">← Back</a>
+        <div style="text-align: right; color: #007bff; font-weight: bold; font-size: 14px;">Step 5/10</div>
+        
+        <div class="header" style="margin-top: 40px;">
+            <h1 style="font-size: 28px; color: #222;">Learning Phase</h1>
+            <p style="color: #666; font-size: 16px; margin-top: 5px;">20 Hours Weekly Dedication</p>
+        </div>
+
+        <div class="progress-section">
+            <div class="success-card">
+                <div class="milestone">
+                    <div style="display:flex; justify-content:space-between; font-weight:800; font-size:16px;">
+                        <span>Theory Sessions</span>
+                        <span id="b1" class="badge">Done ✓</span>
+                    </div>
+                    <div class="progress-track"><div id="f1" class="fill-bar"></div></div>
+                    <p style="text-align:left; color:#888; font-size:13px;">Goal: 8 Hours</p>
+                </div>
+
+                <div class="milestone" style="margin-bottom:0;">
+                    <div style="display:flex; justify-content:space-between; font-weight:800; font-size:16px;">
+                        <span>Practical Labs</span>
+                        <span id="b2" class="badge">Done ✓</span>
+                    </div>
+                    <div class="progress-track"><div id="f2" class="fill-bar"></div></div>
+                    <p style="text-align:left; color:#888; font-size:13px;">Goal: 12 Hours</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-stack" id="btnStack">
+            <div class="btn-rocket" onclick="blastOff()">
+                Explore 10-Module Journey <span id="rocketIcon" class="rocket-box">🚀</span>
+            </div>
+            <a href="internship.html" class="btn" style="text-decoration:none; text-align:center;">Continue to Internship</a>
+        </div>
+    </div>
+
+    <script>
+        function runFlow() {
+            setTimeout(() => {
+                document.getElementById('f1').style.width = '100%';
+                setTimeout(() => { document.getElementById('b1').style.visibility = 'visible'; }, 800);
+            }, 400);
+
+            setTimeout(() => {
+                document.getElementById('f2').style.width = '100%';
+                setTimeout(() => { 
+                    document.getElementById('b2').style.visibility = 'visible';
+                    document.getElementById('btnStack').style.display = 'flex';
+                }, 800);
+            }, 1800);
+        }
+
+        function blastOff() {
+            const rocket = document.getElementById('rocketIcon');
+            rocket.classList.add('launching'); // Animation start
+            setTimeout(() => {
+                window.location.href = 'syllabus.html'; // Page switch
+            }, 600);
+        }
+    </script>
+</body>
+</html>

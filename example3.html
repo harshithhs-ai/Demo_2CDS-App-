@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Mission | DataMites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --green: #10b981; --red: #ef4444; --dark: #1a1a1a; --gray: #666; --blue: #3b82f6; }
+        body { background: #fff; color: var(--dark); font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; overflow-x: hidden; scroll-behavior: smooth; }
+
+        .top-header { position: fixed; top: 15px; left: 0; width: 100%; text-align: center; z-index: 999; }
+        .header-tag { background: rgba(16, 185, 129, 0.1); color: var(--green); padding: 8px 20px; border-radius: 30px; font-size: 14px; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(16, 185, 129, 0.2); backdrop-filter: blur(5px); }
+
+        .progress-nav { position: fixed; top: 0; width: 100%; height: 6px; background: #eee; z-index: 1000; }
+        .progress-fill { height: 100%; background: var(--green); width: 0%; transition: 0.3s; }
+
+        .slide { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 20px; box-sizing: border-box; text-align: center; border-bottom: 1px solid #f9f9f9; }
+        .module-label { font-weight: 800; color: var(--green); font-size: 14px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero-title { font-size: 36px; font-weight: 800; margin: 15px 0; line-height: 1.2; color: #000; }
+        .story-box { max-width: 650px; font-size: 18px; color: var(--gray); line-height: 1.8; margin-bottom: 30px; }
+        .highlight { color: var(--dark); font-weight: 600; border-bottom: 2px solid var(--green); }
+
+        .tools-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 10px; }
+        .tool-card { background: #f0fdf4; border: 1px solid #dcfce7; padding: 8px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; color: var(--green); }
+
+        .action-group { display: flex; gap: 15px; margin-top: 50px; flex-direction: column; align-items: center; }
+        .primary-btn { background: var(--dark); color: #fff; padding: 18px 60px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 18px; width: 280px; text-align: center; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .primary-btn:hover { transform: translateY(-3px); background: #000; }
+        
+        .motivation-box { background: #f0f9ff; padding: 30px; border-radius: 20px; margin-top: 40px; max-width: 600px; border: 1px solid #bae6fd; text-align: center; }
+
+        @media (min-width: 600px) { .action-group { flex-direction: row; } }
+    </style>
+</head>
+<body>
+
+<div class="progress-nav"><div class="progress-fill" id="pBar"></div></div>
+<div class="top-header"><div class="header-tag">Example 3 - Healthcare Mission</div></div>
+
+<section class="slide">
+    <span class="module-label">Module 01 & 02: Foundation</span>
+    <h1 class="hero-title">Saving Lives with Data.</h1>
+    <div class="story-box">
+        A hospital has thousands of patient records with heart issues. You are the Data Scientist. You use <span class="highlight">Python</span> to organize this messy data, making it ready for the doctors to analyze.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Python Foundation</span> <span class="tool-card">Data Science Foundation</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 03: Statistics</span>
+    <h1 class="hero-title">Predicting Disease Risk.</h1>
+    <div class="story-box">
+        Is a patient at risk of a heart attack? You use <span class="highlight">Statistics</span> to calculate the "Probability" based on their age and health history. This helps doctors start treatment before it's too late.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Statistics Essentials</span> <span class="tool-card">Probability</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 04 & 05: Machine Learning</span>
+    <h1 class="hero-title">The Virtual Doctor.</h1>
+    <div class="story-box">
+        You build a <span class="highlight">Machine Learning</span> model that can look at an X-ray and detect a disease instantly. The machine learns from millions of past cases to help doctors make zero-error decisions.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">ML Associate</span> <span class="tool-card">ML Expert</span>
+    </div>
+</section>
+
+
+
+<section class="slide">
+    <span class="module-label">Module 06, 08 & 09: Scaling Up</span>
+    <h1 class="hero-title">Global Health Network.</h1>
+    <div class="story-box">
+        When a new virus spreads, you need to track data from every city. You use <span class="highlight">Cloud (AWS)</span> and <span class="highlight">Big Data</span> tools to process global information in real-time while using <span class="highlight">Git</span> to share findings.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">Big Data Foundation</span> <span class="tool-card">Cloud Deployment</span> <span class="tool-card">Git</span>
+    </div>
+</section>
+
+<section class="slide">
+    <span class="module-label">Module 07 & 10: Database & BI</span>
+    <h1 class="hero-title">The Surgeon's Dashboard.</h1>
+    <div class="story-box">
+        You use <span class="highlight">SQL</span> to filter critical patient data and show it on a <span class="highlight">Tableau Dashboard</span>. The Head of the Hospital looks at the graph to see how many lives were saved today.
+    </div>
+    <div class="tools-container">
+        <span class="tool-card">SQL Databases</span> <span class="tool-card">Tableau / Power BI</span>
+    </div>
+
+    <div class="motivation-box">
+        <b>At DataMites, you start from Zero!</b> <br> 
+        Even if you have no coding knowledge, we teach you everything from the basics of <b>Python</b> to <b>Advanced AI</b> so you can build projects like these!
+    </div>
+
+    <div class="action-group">
+        <a href="internship.html" class="primary-btn">Part 2: Internship →</a>
+    </div>
+</section>
+
+<script>
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("pBar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>
